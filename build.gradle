@@ -17,7 +17,9 @@ apply plugin: 'org.springframework.boot'
 
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
-
+springBoot {
+  mainClass = "DevChallengeApplication"
+}
 repositories {
   mavenCentral()
 }
@@ -26,4 +28,5 @@ dependencies {
   compile("org.springframework.boot:spring-boot-starter-web")
   compileOnly("org.projectlombok:lombok")
   testCompile("org.springframework.boot:spring-boot-starter-test")
+  annotationProcessor('org.projectlombok:lombok:1.8.12')
 }
